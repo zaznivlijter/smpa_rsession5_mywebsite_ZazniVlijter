@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  page-footer: 
+    left: "Copyright 2022, Testy R. Testman" 
+    right: 
+      - icon: github
+        href: https://github.com/
+  title: "Aaron's Website"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - portfolio.qmd
+      - walkthrough.qmd
+      
+
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

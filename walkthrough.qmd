@@ -1,0 +1,35 @@
+---
+title: "Analysis Walkthrough Example"
+author: "Aaron Kessler"
+format:
+  html:
+    self-contained: true
+    code-fold: true
+    code-tools: true
+
+---
+
+We'll start by loading. our libraries.
+
+```{r}
+
+library(tidyverse)
+library(lubridate)
+```
+
+We're going to look at some sample data from Texas on housing prices throughout the state.
+
+First we'll load data.
+
+```{r}
+# run this line below load the data for this assignment
+# we'll use a built-in dataset from the ggplot2 package (loaded as party of the tidyverse)
+housesales <- ggplot2::txhousing
+```
+
+Now, let's see what the data looks like
+
+```{r}
+housesales %>% 
+  head()
+```
