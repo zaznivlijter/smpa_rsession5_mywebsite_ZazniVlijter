@@ -1,8 +1,8 @@
 ---
-title: "Aaron M. Kessler"
+title: "Zazni Vlijter"
 about:
   template: jolla
-  image: testimage.jpg
+  image: 293A8DB3-C4AF-42EE-AF1D-91E6EC88FCC7.jpg
   links:
     - icon: twitter
       text: twitter
@@ -12,20 +12,15 @@ about:
       href: https://github.com/amkessler
 ---
 
-Hi, I'm Aaron and I'm a reporter at the AP in Washington. I like data, the ocean and F1 racing. I've got two little ones and enjoy watching them grow up.
+Hi, I'm Zazni and I'm a student at The George Washington University. I like to cook and take pictures!
 
 ## Education
 
-University of Missouri tktktktk
-
-Columbia University
-
-Washington University in St. Louis
+The George Washington University, Bachelor of Arts in English
 
 ## Skills
 
-Reporting and Writing
-
-Data Analysis
-
-FOIA laws
+Writing,
+Strategic Communications,
+Design, and
+Photography 
