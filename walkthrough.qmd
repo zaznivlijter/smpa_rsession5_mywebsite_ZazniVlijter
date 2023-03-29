@@ -6,30 +6,136 @@ format:
     self-contained: true
     code-fold: true
     code-tools: true
-
----
-
-We'll start by loading. our libraries.
-
-```{r}
+    
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-library(lubridate)
+library(here)
+
 ```
 
-We're going to look at some sample data from Texas on housing prices throughout the state.
-
-First we'll load data.
+# Load the datasets
 
 ```{r}
-# run this line below load the data for this assignment
-# we'll use a built-in dataset from the ggplot2 package (loaded as party of the tidyverse)
-housesales <- ggplot2::txhousing
+
+counties_demographics <- readRDS(here("data", "counties_demographics.rds"))
+counties_elexresults <- readRDS(here("data", "counties_elexresults.rds"))
+counties_rural_urban_suburban <- readRDS(here("data", "counties_rural_urban_suburban.rds"))
+
+
+
 ```
 
-Now, let's see what the data looks like
+# Exercises
+
+1)  
+
+Join together the election results and urban/suburban/rural tables above, and then use the merged table to:
+
+-   filter for just Virginia
+
+-   group_by and summarize to calculate the mean pct of Trump 2020 vote (`pct_r_2020`) by urban/rural categories (`rural_urban`)
 
 ```{r}
-housesales %>% 
-  head()
+full_join(counties_elexresults, counties_rural_urban_suburban)%>%
+filter(state_code == "VA")%>% 
+group_by(rural_urban)%>%
+summarise(averagevotes = mean(pct_r_2020))
+
+```
+
+2)  
+
+Using the joined election results / urban/suburban/rural table created above:
+
+-   filter for just Virginia
+
+-   count up how many counties were won by party in 2020 (`winner_2020`) by urban/rural categories
+
+```{r}
+full_join(counties_elexresults, counties_rural_urban_suburban)%>%
+filter(state_code == "VA")%>% 
+group_by(rural_urban)%>%
+count(winner_2020)
+
+
+
+```
+
+3)  
+
+Join together the election results and demographics tables above, and then use the joined table to:
+
+-   filter for just Florida
+
+-   group/summarize to calculate the mean pct of Trump 2020 vote in the counties above or below national average for college graduates (`pct_ed_college_all_abovebelow_natl`)
+
+```{r}
+inner_join(counties_demographics, counties_elexresults)%>%
+filter(state_code == "FL")%>%
+group_by(pct_ed_college_all_abovebelow_natl)%>%
+summarize(averagevotes = mean(pct_r_2020))
+
+  
+  
+
+
+
+
+```
+
+4)  
+
+Using the joined table you made above:
+
+-   group/summarize to calculate the mean pct of Trump 2020 vote by counties above or below the national average for college graduates (`pct_ed_college_all_abovebelow_natl`).
+
+    Note we're looking for the entire country here.
+
+```{r}
+inner_join(counties_demographics, counties_elexresults)%>%
+group_by(pct_ed_college_all_abovebelow_natl)%>%
+summarize(averagevotes = mean(pct_r_2020))
+
+
+
+```
+
+Now using the joined datasets above, come up with two groupings you find interesting or newsworthy in a particular state, and replicate the steps above them them instead.
+
+5)  
+
+```{r}
+inner_join(counties_demographics, counties_elexresults)%>%
+group_by(pct_mil_veteran)%>%
+summarize(averagevotes = mean(pct_r_2020))
+
+
+
+```
+
+6)  
+
+```{r}
+inner_join(counties_demographics, counties_elexresults)%>%
+group_by(pct_ed_college_all)%>%
+summarize(averagevotes = mean(pct_r_2020))
+
+
+
+
+```
+
+7)  Extra credit
+
+Up until now we've joined two tables together. But we actually have three tables in this project. How might we join all three together into a single table, so all the measures for each county are combined in one place? (Hint: you can do this is multiple steps, doesn't have to be one step only.)
+
+```{r}
+
+full_join(counties_elexresults, counties_rural_urban_suburban)%>% full_join(counties_demographics)
+
+
+
+
 ```
