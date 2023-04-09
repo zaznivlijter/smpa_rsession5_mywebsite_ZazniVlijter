@@ -6,10 +6,10 @@ about:
   links:
     - icon: twitter
       text: twitter
-      href: https://twitter.com/akesslerdc
+      href: https://twitter.com/Zaznilillian
     - icon: github
       text: Github
-      href: https://github.com/amkessler
+      href:https://github.com/zaznivlijter
 ---
 
 Hi, I'm Zazni and I'm a student at The George Washington University. I like to cook and take pictures!
