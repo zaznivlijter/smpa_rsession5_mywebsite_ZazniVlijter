@@ -1,4 +1,4 @@
----
+
 title: "Analysis Walkthrough Example"
 author: "Zazni Vlijter"
 format:
@@ -16,16 +16,6 @@ library(here)
 ```
 
 # Load the datasets
-
-```{r}
-
-counties_demographics <- readRDS(here("data", "counties_demographics.rds"))
-counties_elexresults <- readRDS(here("data", "counties_elexresults.rds"))
-counties_rural_urban_suburban <- readRDS(here("data", "counties_rural_urban_suburban.rds"))
-
-
-
-```
 
 # Exercises
 
