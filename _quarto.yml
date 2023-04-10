@@ -15,9 +15,10 @@ website:
         text: Home
       - about.qmd
       - portfolio.qmd
+        - Sample Academic Paper.qmd
+        - Example News Story.qmd
       - walkthrough.qmd
-      - Example News Story.qmd
-      - Sample Academic Paper.qmd
+
       
 
 
