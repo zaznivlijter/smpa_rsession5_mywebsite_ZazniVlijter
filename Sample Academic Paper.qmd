@@ -1,11 +1,6 @@
 ---
-title: "Portfolio"
+title: "Sample Academic Paper"
 ---
-
-Hi there this is my portfolio page! Yay...
-  
-Here's another line for good measure.
-
 Here is an excerpt of a paper done in 2022 for Critical Theory 
 
 The Alteration of Aura and Loss of Reality 

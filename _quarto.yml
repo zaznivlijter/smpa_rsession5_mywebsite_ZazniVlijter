@@ -4,7 +4,7 @@ project:
 
 website:
   page-footer: 
-    left: "Copyright 2022, Testy R. Testman" 
+    left: "Copyright 2022" 
     right: 
       - icon: github
         href: https://github.com/
