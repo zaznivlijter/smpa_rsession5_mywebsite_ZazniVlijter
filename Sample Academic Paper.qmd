@@ -1,7 +1,8 @@
 ---
 title: "Sample Academic Paper"
 ---
-Here is an excerpt of a paper done in 2022 for Critical Theory 
+
+Here is an excerpt of a paper done in 2022 for Critical Theory
 
 The Alteration of Aura and Loss of Reality 
 
@@ -37,3 +38,5 @@ Baudrillard, Jean “ The Precession of Simulacra” The Norton Anthology Theory
 Cabanel, Alexandre The Fallen Angel. 1868. Musee Fabre, France 
 
 Shaw, Sam Flying Skirt. 1954. 
+
+```
