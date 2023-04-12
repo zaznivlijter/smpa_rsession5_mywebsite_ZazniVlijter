@@ -16,6 +16,8 @@ website:
       - about.qmd
       - portfolio.qmd
       - walkthrough.qmd
+      - Sample Academic Paper.qmd
+      - Example News Story.qmd
   
 
 format:
