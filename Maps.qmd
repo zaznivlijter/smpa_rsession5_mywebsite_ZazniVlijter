@@ -1,2 +1,5 @@
+---
+title: "Mapping Sample of New York"
+---
 Here is an example of an interactive county census map in New York!
 
