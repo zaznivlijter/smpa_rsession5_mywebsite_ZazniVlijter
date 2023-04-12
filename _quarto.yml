@@ -10,17 +10,13 @@ website:
         href: https://github.com/
   title: "Zazni Vlijter's Website"
   navbar:
-    left:
+   left:
       - href: index.qmd
         text: Home
       - about.qmd
       - portfolio.qmd
-        - Sample Academic Paper.qmd
-        - Example News Story.qmd
       - walkthrough.qmd
-
-      
-
+  
 
 format:
   html:
