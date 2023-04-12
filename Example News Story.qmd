@@ -1,3 +1,6 @@
+---
+title: "News Story"
+---
 Here is an example of a news story done during my time at GWU
 
 Zazni Vlijter 
