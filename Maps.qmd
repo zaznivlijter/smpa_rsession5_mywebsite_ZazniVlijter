@@ -1,10 +1,10 @@
 ---
-title: "Mapping Sample of New York"
+title: "Mapping Sample of New York and Election Work"
 ---
 
 Here is an example of an interactive county census map in New York!
 
-knitr::opts_chunk$set(echo = TRUE)
+
 ```{r}
 knitr::opts_chunk$set(echo = TRUE)
 
@@ -237,12 +237,3 @@ mapview(ny_counties_withgeo, zcol = "medincome",
 
 
 ```{r}
-
-
-
-```
-
-
-
-
-
