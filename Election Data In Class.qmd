@@ -16,8 +16,7 @@ options(scipen = 999)
 options(stringsAsFactors = FALSE)
 
 
-#load saved joined data file from previous script
-joined_vacomparison <- readRDS(here("processed_data", "joined_vacomparison.rds"))
+
 
 ```
 
