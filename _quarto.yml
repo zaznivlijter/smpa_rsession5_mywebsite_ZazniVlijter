@@ -19,7 +19,9 @@ website:
       - Sample Academic Paper.qmd
       - Example News Story.qmd
       - Maps.qmd
-      - Election Data in Class.qmd
+      - Election in Class Exercise.qmd
+
+  
   
 
 format:
