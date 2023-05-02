@@ -1,5 +1,5 @@
 ---
-title: Filtering Walkthrough
+title: "Walkthrough"
 editor: visual
 ---
 
