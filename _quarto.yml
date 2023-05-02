@@ -13,7 +13,8 @@ website:
    left:
       - href: index.qmd
         text: Home
-      - href: Resume.pdf
+      - href: https://github.com/zaznivlijter/smpa_rsession5_mywebsite_ZazniVlijter/blob/main/Resume.pdf
+        text: Resume
       - about.qmd
       - walkthrough.qmd
       - Sample Academic Paper.qmd

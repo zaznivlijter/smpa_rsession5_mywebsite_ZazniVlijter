@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -84,8 +147,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="https://github.com/zaznivlijter/smpa_rsession5_mywebsite_ZazniVlijter/blob/main/Resume.pdf">
+ <span class="menu-text">Resume</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./about.html">
- <span class="menu-text">More Stuff About Me</span></a>
+ <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./walkthrough.html">
@@ -107,6 +174,8 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./Election in Class Exercise.html">
  <span class="menu-text">Election in Class Exercise</span></a>
   </li>  
+  <li class="dropdown-header">
+ <span class="menu-text">Filtering Walkthough.qmd</span></li>
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -142,7 +211,89 @@ ul.task-list li input[type="checkbox"] {
 
 <p>When you are trying to sort and filter out certain works and information, it is important to know which exact functions you should use in order to ensure that you get the information that you’re looking for. I will walk you through the steps to sort out information from a data set by using the filter function.</p>
 <div class="cell">
-
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.0     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.1     ✔ tibble    3.1.8
+✔ lubridate 1.9.2     ✔ tidyr     1.3.0
+✔ purrr     1.0.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the ]8;;http://conflicted.r-lib.org/conflicted package]8;; to force all conflicts to become errors</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>GA_votedemos_2016_gen <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"GA_votedemos_2016_gen.rds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>First we will be using Georgia’s voting data from 2016:</p>
+<p>Use the function head() to load in the data and give you a snapshot of what the data looks like:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(GA_votedemos_2016_gen)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 70
+  elexy…¹ elext…² county count…³ black…⁴ black…⁵ black…⁶ black…⁷ black…⁸ black…⁹
+    &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+1    2016 general APPLI… 001         954     393    41.2    1247     692    55.5
+2    2016 general ATKIN… 002         396     200    50.5     527     310    58.8
+3    2016 general BACON  003         343     106    30.9     566     267    47.2
+4    2016 general BAKER  004         425     225    52.9     557     365    65.5
+5    2016 general BALDW… 005        4160    2225    53.5    6028    4078    67.6
+6    2016 general BANKS  006         111      49    44.1      84      43    51.2
+# … with 60 more variables: black_unknown_registered &lt;dbl&gt;,
+#   black_unknown_voted &lt;dbl&gt;, black_unknown_pct &lt;dbl&gt;,
+#   white_male_registered &lt;dbl&gt;, white_male_voted &lt;dbl&gt;, white_male_pct &lt;dbl&gt;,
+#   white_female_registered &lt;dbl&gt;, white_female_voted &lt;dbl&gt;,
+#   white_female_pct &lt;dbl&gt;, white_unknown_registered &lt;dbl&gt;,
+#   white_unknown_voted &lt;dbl&gt;, white_unknown_pct &lt;dbl&gt;,
+#   asian_male_registered &lt;dbl&gt;, asian_male_voted &lt;dbl&gt;, …</code></pre>
+</div>
+</div>
+<p>So now we have our data loaded in. But lets say I only want information from the general elections</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(GA_votedemos_2016_gen, elextype <span class="sc">==</span> <span class="st">"general"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 159 × 70
+   elexyear elextype county   county_c…¹ black…² black…³ black…⁴ black…⁵ black…⁶
+      &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;    &lt;chr&gt;        &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+ 1     2016 general  APPLING  001            954     393    41.2    1247     692
+ 2     2016 general  ATKINSON 002            396     200    50.5     527     310
+ 3     2016 general  BACON    003            343     106    30.9     566     267
+ 4     2016 general  BAKER    004            425     225    52.9     557     365
+ 5     2016 general  BALDWIN  005           4160    2225    53.5    6028    4078
+ 6     2016 general  BANKS    006            111      49    44.1      84      43
+ 7     2016 general  BARROW   007           2135    1059    49.6    2822    1860
+ 8     2016 general  BARTOW   008           2698    1181    43.8    3521    2002
+ 9     2016 general  BEN HILL 009           1299     578    44.5    2103    1235
+10     2016 general  BERRIEN  010            481     218    45.3     634     348
+# … with 149 more rows, 61 more variables: black_female_pct &lt;dbl&gt;,
+#   black_unknown_registered &lt;dbl&gt;, black_unknown_voted &lt;dbl&gt;,
+#   black_unknown_pct &lt;dbl&gt;, white_male_registered &lt;dbl&gt;,
+#   white_male_voted &lt;dbl&gt;, white_male_pct &lt;dbl&gt;,
+#   white_female_registered &lt;dbl&gt;, white_female_voted &lt;dbl&gt;,
+#   white_female_pct &lt;dbl&gt;, white_unknown_registered &lt;dbl&gt;,
+#   white_unknown_voted &lt;dbl&gt;, white_unknown_pct &lt;dbl&gt;, …</code></pre>
+</div>
+</div>
+<p>Now that we have all the information from the general elections, then I may want to filter this even more to be more specific. Lets say out of this data set I only want to know about Banks County. I would use %&gt;% to connect my two functions and filter out of the data I just filtered.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(GA_votedemos_2016_gen, elextype <span class="sc">==</span> <span class="st">"general"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(county <span class="sc">==</span> <span class="st">"BANKS"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 70
+  elexy…¹ elext…² county count…³ black…⁴ black…⁵ black…⁶ black…⁷ black…⁸ black…⁹
+    &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+1    2016 general BANKS  006         111      49    44.1      84      43    51.2
+# … with 60 more variables: black_unknown_registered &lt;dbl&gt;,
+#   black_unknown_voted &lt;dbl&gt;, black_unknown_pct &lt;dbl&gt;,
+#   white_male_registered &lt;dbl&gt;, white_male_voted &lt;dbl&gt;, white_male_pct &lt;dbl&gt;,
+#   white_female_registered &lt;dbl&gt;, white_female_voted &lt;dbl&gt;,
+#   white_female_pct &lt;dbl&gt;, white_unknown_registered &lt;dbl&gt;,
+#   white_unknown_voted &lt;dbl&gt;, white_unknown_pct &lt;dbl&gt;,
+#   asian_male_registered &lt;dbl&gt;, asian_male_voted &lt;dbl&gt;, …</code></pre>
+</div>
 </div>
 
 
