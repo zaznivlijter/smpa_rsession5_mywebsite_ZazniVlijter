@@ -13,6 +13,7 @@ website:
    left:
       - href: index.qmd
         text: Home
+      - href: Resume.pdf
       - about.qmd
       - walkthrough.qmd
       - Sample Academic Paper.qmd
@@ -20,6 +21,7 @@ website:
       - Maps.qmd
       - Election in Class Exercise.qmd
       - Filtering Walkthough.qmd
+      
 
   
   
