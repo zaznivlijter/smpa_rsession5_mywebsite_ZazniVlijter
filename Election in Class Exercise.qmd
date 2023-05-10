@@ -25,8 +25,6 @@ options(stringsAsFactors = FALSE)
 
 Data available here: <https://historical.elections.virginia.gov/elections/view/144567/>
 
-*AK COMMENT: The reason it wasn't recognizing the joined_vacomparison name below is that you haven't actually imported the data into the script? In other words, you brought the files in to the project - so that's good. But you then also need to tell the R script that the file exists and to import the data in to it.* *Like this:*
-
 ```{r}
 joined_vacomparison <- readRDS("joined_vacomparison.rds")
 ```
