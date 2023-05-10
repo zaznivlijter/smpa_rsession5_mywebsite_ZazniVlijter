@@ -4,6 +4,15 @@ editor: visual
 ---
 
 ```{r}
+library(tidyverse)
+counties_demographics <- readRDS("counties_demographics.rds")
 
 ```
+
+```{r}
+filter(counties_demographics, state_code == "NY")
+```
+
+
+```{r}
 

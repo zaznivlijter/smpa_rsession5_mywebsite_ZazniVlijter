@@ -214,7 +214,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </header>
 
 <p>Data available here: <a href="https://historical.elections.virginia.gov/elections/view/144567/" class="uri">https://historical.elections.virginia.gov/elections/view/144567/</a></p>
-<p><em>AK COMMENT: The reason it wasn’t recognizing the joined_vacomparison name below is that you haven’t actually imported the data into the script? In other words, you brought the files in to the project - so that’s good. But you then also need to tell the R script that the file exists and to import the data in to it.</em> <em>Like this:</em></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>joined_vacomparison <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"joined_vacomparison.rds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
