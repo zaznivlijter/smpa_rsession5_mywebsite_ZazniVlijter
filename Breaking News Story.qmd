@@ -15,4 +15,4 @@ filter(counties_demographics, state_code == "NY")
 
 
 ```{r}
-
+filter(counties_demographics, pct_ed_college_abovebelow_natl == "BELOW")
